@@ -21,6 +21,10 @@ Do not close this window!""")
     # The tab 1, 2, 3 layouts - what goes inside the tab
     tab1_layout = [[sg.Text('Tab 1')],
                    [sg.Text('Put your layout in here')],
+                   [sg.Image(filename="data\pictures\LamuWaterfront.png", key='image_1'), sg.Image(
+                       filename="data\pictures\LamuWaterfront.png", key='image_2')],
+                   [sg.Image(filename="data\pictures\LamuWaterfront.png", key='image_3'), sg.Image(
+                       filename="data\pictures\LamuWaterfront.png", key='image_4')],
                    [sg.Text('Input something'), sg.Input(size=(12, 1), key='-IN-TAB1-')]]
 
     tab2_layout = [[sg.Text('Tab 2')]]
@@ -30,16 +34,16 @@ Do not close this window!""")
     # The TabgGroup layout - it must contain only Tabs
     tab_group_layout = [[sg.Tab('Tab 1', tab1_layout, key='-TAB1-'),
                         sg.Tab('Tab 2', tab2_layout,
-                               visible=False, key='-TAB2-'),
+                               visible=True, key='-TAB2-'),
                         sg.Tab('Tab 3', tab3_layout, key='-TAB3-'),
                         sg.Tab('Tab 4', tab4_layout,
-                               visible=False, key='-TAB4-'),
+                               visible=True, key='-TAB4-'),
                          ]]
 
     # The window layout - defines the entire window
     layout = [[sg.TabGroup(tab_group_layout,
                            enable_events=True,
-                           key='-TABGROUP-')],
+                           key='-TABGROUP-', expand_x=True, expand_y=True, tab_location="top")],
               [sg.Text('Make tab number'), sg.Input(key='-IN-', size=(3, 1)), sg.Button('Invisible'), sg.Button('Visible'), sg.Button('Select')]]
 
     window = sg.Window("SRV APP 0.1 - by Thiago Jung - thiagojm1984@hotmail.com", layout, size=(1024, 720),
