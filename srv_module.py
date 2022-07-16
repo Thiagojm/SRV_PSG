@@ -31,5 +31,3 @@ def resize_image(ImageFilePath, width, height):
     offset = (round((width - resize_width) / 2), round((height - resize_height) / 2))
     background.paste(image_resize, offset)
     background.save(f'{ImageFilePath[:-4]}_resized.png')
-    
-resize_loop('../data/pictures/', 407, 286)
