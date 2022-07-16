@@ -19,20 +19,17 @@ Do not close this window!""")
     sg.theme('DarkBlue14')
 
     # The tab 1, 2, 3 layouts - what goes inside the tab
-    tab1_layout = [[sg.Text('Tab 1')],
-                   [sg.Text('Put your layout in here')],
-                   [sg.Image(filename="data\pictures\LamuWaterfront.png", key='image_1'), sg.Image(
-                       filename="data\pictures\LamuWaterfront.png", key='image_2')],
-                   [sg.Image(filename="data\pictures\LamuWaterfront.png", key='image_3'), sg.Image(
-                       filename="data\pictures\LamuWaterfront.png", key='image_4')],
-                   [sg.Text('Input something'), sg.Input(size=(12, 1), key='-IN-TAB1-')]]
+    tab1_layout = [[sg.Image(filename="data/pictures/BritanniaBridgeWales_resized.png", key='image_1'), sg.Image(
+        filename="data/pictures/EverestAndLhotsePeaks_resized.png", key='image_2')],
+        [sg.Image(filename="data/pictures/LamuWaterfront_resized.png", key='image_3'), sg.Image(
+            filename="data/pictures/GrandCanyon_resized.png", key='image_4')]]
 
     tab2_layout = [[sg.Text('Tab 2')]]
     tab3_layout = [[sg.Text('Tab 3')]]
     tab4_layout = [[sg.Text('Tab 4')]]
 
     # The TabgGroup layout - it must contain only Tabs
-    tab_group_layout = [[sg.Tab('Tab 1', tab1_layout, key='-TAB1-'),
+    tab_group_layout = [[sg.Tab('Tab 1', tab1_layout, key='-TAB1-', element_justification='center'),
                         sg.Tab('Tab 2', tab2_layout,
                                visible=True, key='-TAB2-'),
                         sg.Tab('Tab 3', tab3_layout, key='-TAB3-'),

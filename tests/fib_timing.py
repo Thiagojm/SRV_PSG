@@ -28,14 +28,14 @@ def return_number(string):
 
 # Python call
 
-# t0 = time.time()
+t0 = time.time()
 
-# a = fib(35)
+a = fib(35)
 
-# t1 = time.time()
+t1 = time.time()
 
-# total_time = t1 - t0
-# print(f"Fib = {a}. Total time of Python Fib: {total_time}")
+total_time = t1 - t0
+print(f"Fib = {a}. Total time of Python Fib: {total_time}")
 
 # CPP call
 t2 = time.time()
@@ -67,3 +67,13 @@ t7 = time.time()
 
 total_time_4 = t7 - t6
 print(f"Fib = {d}. Total time of Rust Module Fib: {total_time_4}")
+
+# GO call
+t8 = time.time()
+
+e = call_binary("fib_go.exe")
+
+t9 = time.time()
+
+total_time_5 = t9 - t8
+print(f"Fib = {return_number(e)}. Total time of Go Fib: {total_time_5}")
