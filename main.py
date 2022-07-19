@@ -19,12 +19,13 @@ Do not close this window!""")
     sg.theme('DarkBlue14')
 
     # The tab 1, 2, 3 layouts - what goes inside the tab
-    tab1_layout = [[sg.Image(filename="data/pictures/BritanniaBridgeWales_resized.png", key='image_1'), sg.Image(
-        filename="data/pictures/EverestAndLhotsePeaks_resized.png", key='image_2')],
-        [sg.Image(filename="data/pictures/LamuWaterfront_resized.png", key='image_3'), sg.Image(
-            filename="data/pictures/GrandCanyon_resized.png", key='image_4')]]
+    tab1_layout = [[sg.B(image_source="data/pictures/BritanniaBridgeWales_resized.png", key='image_1'), sg.B(
+        image_source="data/pictures/EverestAndLhotsePeaks_resized.png", key='image_2')],
+        [sg.B(image_source="data/pictures/LamuWaterfront_resized.png", key='image_3'), sg.B(
+            image_source="data/pictures/GrandCanyon_resized.png", key='image_4')]]
 
-    tab2_layout = [[sg.Text('Tab 2')]]
+    tab2_layout = [[sg.Text('Tab 2')],
+                   [sg.B(image_source="data/pictures/EverestAndLhotsePeaks_resized.png")]]
     tab3_layout = [[sg.Text('Tab 3')]]
     tab4_layout = [[sg.Text('Tab 4')]]
 
